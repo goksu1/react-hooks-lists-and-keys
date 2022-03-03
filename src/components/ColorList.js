@@ -8,6 +8,9 @@ function ColorList() {
     "darkslategray",
     "hotpink",
   ];
+  const colorElements = colors.map((color) => {
+    return <li key={color} style={{ color: color }}>{color}</li>;
+  });
 
   return (
     <div>
@@ -18,6 +21,7 @@ function ColorList() {
         <li style={{ color: colors[2] }}>{colors[2]}</li>
         <li style={{ color: colors[3] }}>{colors[3]}</li>
         <li style={{ color: colors[4] }}>{colors[4]}</li>
+        {colorElements}
       </ol>
     </div>
   );
